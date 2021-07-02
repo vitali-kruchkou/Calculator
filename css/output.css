@@ -1,0 +1,11 @@
+.buttons {
+  max-width: 400px;
+  border: 1px solid black; }
+  .buttons .button-block .button-number {
+    width: 100px;
+    font-size: 16px; }
+  .buttons .button-block .button-operator {
+    width: 100px;
+    font-size: 16px; }
+
+/*# sourceMappingURL=output.css.map */
