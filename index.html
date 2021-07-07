@@ -5,67 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/output.css">
 </head>
 <body>
     <div class="container">
-        <div class="history">
+        <div class="history" id="historyContainer">
+            <ul id="historyList" class="history-list">
 
+            </ul>
         </div>
         <div class="input">
             <form action="#">
-            <input type="text" name="" id="input-textarea"></input>
-            <input name="angle" type="radio" value="gradus" id="gradus" checked><label for="gradus">Градусы</label>
-            <input name="angle" type="radio" value="radian" id="radian"><label for="radian">Радианы</label>
+            <input type="text" name="" id="input-textarea"/>
+            <div class="check-angle">
+                <label for="gradus"><input name="angle" type="radio" value="gradus" id="gradus" checked>Градусы</label>
+                <label for="radian"><input name="angle" type="radio" value="radian" id="radian">Радианы</label>
+            </div>
         </form>
         </div>
         <div class="flex-container">
             <div class="flex-row">
-                <div class="button-block added "><button class="button-operator-pow">^</button></div>
-                <div class="button-block complex-function"><button class="button-operator-radic">&radic;</button></div>
-                <div class="button-block added "><button class="button">(</button></div>
-                <div class="button-block added "><button class="button-operator-separation">.</button></div>  
-                <div class="button-block added "><button class="button">)</button></div>
-                <div class="button-block added "><button class="button-operator">/</button></div>
-                <div class="button-block"><button class="button-operator-back">&larr;</button></div>
+                <div class="button-block" id="added"><button class="button-operator-pow">^</button></div>
+                <div class="button-block" id="complex-function"><button class="button-operator-radic">&radic;</button></div>
+                <div class="button-block" id="added"><button class="button">(</button></div>
+                <div class="button-block" id="added"><button class="button-operator-separation">.</button></div>  
+                <div class="button-block" id="added"><button class="button">)</button></div>
+                <div class="button-block"><button id="button-operator-back">&larr;</button></div>
+                <div class="button-block"id="added"><button class="button-operator">/</button></div>
             </div>
             <div class="flex-row">
-                <div class="button-block complex-function"><button class="button-operator-sin">sin</button></div>
-                <div class="button-block complex-function"><button class="button-operator-sin">sinh</button></div>
-                <div class="button-block complex-function"><button class="button-operator-ctg">ctg</button></div>
-                <div class="button-block added "><button class="button-number">7</button></div>
-                <div class="button-block added "><button class="button-number">8</button></div>
-                <div class="button-block added "><button class="button-number">9</button></div>
-                <div class="button-block added "><button class="button-operator">*</button></div>
+                <div class="button-block" id="complex-function"><button class="button-operator-sin">sin</button></div>
+                <div class="button-block" id="complex-function"><button class="button-operator-sin">sinh</button></div>
+                <div class="button-block" id="complex-function"><button class="button-operator-ctg">ctg</button></div>
+                <div class="button-block" id="added"><button class="button-number">7</button></div>
+                <div class="button-block" id="added"><button class="button-number">8</button></div>
+                <div class="button-block" id="added"><button class="button-number">9</button></div>
+                <div class="button-block" id="added"><button class="button-operator">*</button></div>
             </div>
             <div class="flex-row">
-                <div class="button-block complex-function"><button class="button-operator-cos">cos</button></div>
-                <div class="button-block complex-function"><button class="button-operator-cos">cosh</button></div>
-                <div class="button-block complex-function"><button class="button-operator-ctg">sec</button></div>
-                <div class="button-block added "><button class="button-number">4</button></div>
-                <div class="button-block added "><button class="button-number">5</button></div>
-                <div class="button-block added "><button class="button-number">6</button></div>
-                <div class="button-block added "><button class="button-operator">-</button></div>
+                <div class="button-block" id="complex-function"><button class="button-operator-cos">cos</button></div>
+                <div class="button-block" id="complex-function"><button class="button-operator-cos">cosh</button></div>
+                <div class="button-block" id="complex-function"><button class="button-operator-ctg">sec</button></div>
+                <div class="button-block" id="added"><button class="button-number">4</button></div>
+                <div class="button-block" id="added"><button class="button-number">5</button></div>
+                <div class="button-block" id="added"><button class="button-number">6</button></div>
+                <div class="button-block" id="added"><button class="button-operator">-</button></div>
             </div>
             <div class="flex-row">
-                <div class="button-block complex-function"><button class="button-operator-tg">tan</button></div>
-                <div class="button-block complex-function"><button class="button-operator-tg">tanh</button></div>
-                <div class="button-block complex-function"><button class="button-operator-ctg">csc</button></div>
-                <div class="button-block added "><button class="button-number">1</button></div>
-                <div class="button-block added "><button class="button-number">2</button></div>
-                <div class="button-block added "><button class="button-number">3</button></div>
-                <div class="button-block added "><button class="button-operator">+</button></div>
+                <div class="button-block" id="complex-function"><button class="button-operator-tg">tan</button></div>
+                <div class="button-block" id="complex-function"><button class="button-operator-tg">tanh</button></div>
+                <div class="button-block" id="complex-function"><button class="button-operator-ctg">csc</button></div>
+                <div class="button-block" id="added"><button class="button-number">1</button></div>
+                <div class="button-block" id="added"><button class="button-number">2</button></div>
+                <div class="button-block" id="added"><button class="button-number">3</button></div>
+                <div class="button-block" id="added"><button class="button-operator">+</button></div>
             </div>
             <div class="flex-row">
-                <div class="button-block added "><button class="button-operator-precent">%</button></div>
-                <div class="button-block complex-function"><button class="button-operator-ln">ln</button></div>
-                <div class="button-block added "><button class="button-operator-factorial">!</button></div> 
-                <div class="button-block added "><button class="button-number">0</button></div>
-                <div class="button-block"><button class="button-operator-equally">=</button></div>
-                <div class="button-block"><button class="button-operator-delete">С</button></div>
+                <div class="button-block" id="added"><button id="button-operator-precent">%</button></div>
+                <div class="button-block" id="complex-function"><button class="button-operator-ln">ln</button></div>
+                <div class="button-block" id="added"><button id="button-operator-factorial">!</button></div> 
+                <div class="button-block" id="added"><button class="button-number">0</button></div>
+                <div class="button-block"><button class="button-operator-equally" id="equally">=</button></div>
+                <div class="button-block"><button id="button-operator-delete">С</button></div>
             </div>
         </div>
     </div>
-    <script src="./js/main.js"></script>
+    <script type="module" src="./js/complexFunctions.js"></script>
+    <script type="module" src="./js/factorial.js"></script>
+    <script type="module" src="./js/computation.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>
