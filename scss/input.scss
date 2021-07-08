@@ -34,6 +34,10 @@ $fontSize: 20px;
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
+* {
+    margin: 0;
+    padding: 0;
+}
 
 .history {
     max-width: $maxWidth;
